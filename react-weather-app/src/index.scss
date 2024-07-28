@@ -1,0 +1,75 @@
+@import 'var.scss';
+
+:root {
+  font-family: $font-family;
+  line-height: $line-height;
+  font-weight: $font-weight;
+
+  color-scheme: light dark;
+  color: $color-light;
+  background-color: $background-dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: $link-color;
+  text-decoration: inherit;
+
+  &:hover {
+    color: $link-hover-dark;
+  }
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: $button-radius;
+  border: 1px solid transparent;
+  padding: $button-padding;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  font-family: inherit;
+  background-color: $button-bg-dark;
+  cursor: pointer;
+  transition: border-color $transition-time;
+
+  &:hover {
+    border-color: $button-border-hover;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: $color-dark;
+    background-color: $background-light;
+  }
+
+  a:hover {
+    color: $link-hover-light;
+  }
+
+  button {
+    background-color: $button-bg-light;
+  }
+}
